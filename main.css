@@ -35,6 +35,7 @@ body, html {
         padding: 2rem;
         box-sizing: border-box;
         overflow: hidden;
+        cursor: pointer;
     }
     .Artifact1 { background-color: #1b5109; } 
     .Artifact2 { background-color: #36545a; }
