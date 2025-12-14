@@ -1,0 +1,14 @@
+﻿  SceneManager.cpp
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\SceneManager.cpp(62,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\SceneManager.cpp(280,16): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\SceneManager.cpp(660,20): warning C4018: '<': signed/unsigned mismatch
+  ViewManager.cpp
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(163,12): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(164,12): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(169,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(170,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(173,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(174,11): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Brend\Downloads\7-1_FinalProjectMilestones (4)dhawdawdaw\7-1_FinalProjectMilestones\Source\ViewManager.cpp(260,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  7-1_FinalProjectMilestones.vcxproj -> C:\Users\Brend\Downloads\CS330Content (3)\CS330Content\Projects\7-1_FinalProjectMilestones\Debug\7-1_FinalProjectMilestones.exe
