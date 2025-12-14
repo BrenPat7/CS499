@@ -8,13 +8,91 @@
     <title>CS499 Capstone/ePortfolio</title>
     <link rel="stylesheet" href="/resources/style/style.css">
 </head>
+
 <body>
+
     <header>
-        <h1>Welcome to CS499 ePortfolio</h1>
+        <h2>Brendan Clarke CS Capstone - CS 499</h2>
+        <p>Scroll to explore artifacts</p>
     </header>
-    <main>
-        <p>This is a default static page.</p>
-    </main>
-    <script src="/resources/script/script.js"></script>
+
+    <div>
+        <ul>
+            <li class="Artifact1">
+                <div class="innerart">
+                    <div class="visual-box">1</div>
+                    <div class="text-content">
+                        <h2>Software Design/Engineering</h2>
+                        <p>Hex Reference: 1b5109</p>
+                        <hr style="border-color: #F0E68C; opacity: 0.5;">
+                        <p>Detailed analysis of the binary files and decompilation processes used in this artifact.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="Artifact2">
+                <div class="innerart">
+                    <div class="visual-box">2</div>
+                    <div class="text-content">
+                        <h2>Algorithms & Data Structure</h2>
+                        <p>Hex Reference: 36545a</p>
+                        <hr style="border-color: #F0E68C; opacity: 0.5;">
+                        <p>Optimizing the sorting algorithms and memory management for the OpenGL project.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="Artifact3">
+                <div class="innerart">
+                    <div class="visual-box">3</div>
+                    <div class="text-content">
+                        <h2>Databases</h2>
+                        <p>Hex Reference: 624c1d</p>
+                        <hr style="border-color: #F0E68C; opacity: 0.5;">
+                        <p>Implementation of SQL protocols and data integrity checks.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="Bio">
+        <h3>About Me</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="foot">
+        <p>Brendan Clarke - CS 499 ePortfolio</p>
+    </div>
+
+    <script>
+        // 1. Setup the Intersection Observer
+        // This watches the elements to see when they enter the screen
+        const observerOptions = {
+            root: null,      // use the viewport
+            rootMargin: '-20% 0px -20% 0px', // Trigger when the element is in the middle 60% of screen
+            threshold: 0.3   // trigger when 30% of the item is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If the element is in view
+                if (entry.isIntersecting) {
+                    // Add 'active' class to expand it
+                    entry.target.classList.add('active');
+                } else {
+                    // Remove 'active' class to shrink it
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, observerOptions);
+
+        // 2. Target all list items
+        const items = document.querySelectorAll('li');
+        items.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+
 </body>
 </html>
