@@ -178,3 +178,23 @@ body, html {
     object-fit: cover;  
     display: block;     
 }
+.linkedin-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    color: #F0E68C; 
+    border: 2px solid #F0E68C;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px; 
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+}
+
+.linkedin-btn:hover {
+    background-color: #F0E68C;
+    color: #1a1a1a; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 15px rgba(240, 230, 140, 0.4);
+}
