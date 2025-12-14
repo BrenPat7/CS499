@@ -66,28 +66,27 @@
     </div>
 
     <script>
-        // 1. Setup the Intersection Observer
-        // This watches the elements to see when they enter the screen
+       
         const observerOptions = {
-            root: null,      // use the viewport
-            rootMargin: '-20% 0px -20% 0px', // Trigger when the element is in the middle 60% of screen
-            threshold: 0.3   // trigger when 30% of the item is visible
+            root: null,      
+            rootMargin: '-20% 0px -20% 0px', 
+            threshold: 0.3   
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // If the element is in view
+               
                 if (entry.isIntersecting) {
-                    // Add 'active' class to expand it
+                  
                     entry.target.classList.add('active');
                 } else {
-                    // Remove 'active' class to shrink it
+                   
                     entry.target.classList.remove('active');
                 }
             });
         }, observerOptions);
 
-        // 2. Target all list items
+      
         const items = document.querySelectorAll('li');
         items.forEach(item => {
             observer.observe(item);
