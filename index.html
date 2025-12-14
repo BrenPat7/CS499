@@ -23,7 +23,7 @@
             </div>
 
             <div id="ink-content" class="ink-content">
-                
+
             </div>
         </div>
     </section>
@@ -105,6 +105,17 @@
         items.forEach(item => {
             observer.observe(item);
         });
+        document.addEventListener("DOMContentLoaded", function() {
+         const title = document.getElementById('typing-title');
+         const content = document.getElementById('ink-content');
+
+        title.classList.add('typing-active');
+
+        setTimeout(() => {
+        title.style.borderRight = "none";
+        content.classList.add('ink-visible');
+         }, 3500);
+    });
     </script>
 
 </body>

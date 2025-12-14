@@ -17,19 +17,18 @@ body, html {
         border-bottom: 2px solid #ddd;
     }
 
-    /* THE LIST CONTAINER */
+   
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    /* THE ARTIFACT SECTIONS (The Rows) */
+
     li {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* Default State: Small height, dim opacity */
         min-height: 40vh; 
         transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
         opacity: 0.5;
@@ -37,19 +36,13 @@ body, html {
         box-sizing: border-box;
         overflow: hidden;
     }
-
-    /* BACKGROUND COLORS (Based on your text hex codes) */
-    .Artifact1 { background-color: #1b5109; } /* Dark Green */
-    .Artifact2 { background-color: #36545a; } /* Slate Green */
-    .Artifact3 { background-color: #624c1d; } /* Brownish Green */
-
-    /* ACTIVE STATE (Triggered by Scroll) */
+    .Artifact1 { background-color: #1b5109; } 
+    .Artifact2 { background-color: #36545a; }
+    .Artifact3 { background-color: #624c1d; }
     li.active {
-        min-height: 80vh; /* Expands when active */
+        min-height: 80vh; 
         opacity: 1;
     }
-
-    /* INTERNAL LAYOUT (The Box and The Text) */
     .innerart {
         display: flex;
         width: 100%;
@@ -57,23 +50,19 @@ body, html {
         align-items: center;
         gap: 5%;
     }
-
-    /* ALTERNATING LAYOUT */
-    /* Odd items (1, 3): Box Left, Text Right */
     li:nth-child(odd) .innerart {
         flex-direction: row;
     }
-    /* Even items (2): Text Left, Box Right */
+
     li:nth-child(even) .innerart {
         flex-direction: row-reverse; 
         text-align: right;
     }
 
-    /* THE BOX (Simulating the yellow outlined box in your image) */
     .visual-box {
         flex: 1;
         aspect-ratio: 4/3;
-        border: 8px solid #F0E68C; /* Khaki yellow border */
+        border: 8px solid #F0E68C; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -82,23 +71,23 @@ body, html {
         color: white;
         transition: transform 0.5s ease;
     }
-
-    /* THE TEXT AREA */
     .text-content {
         flex: 1;
-        opacity: 0; /* Hidden by default */
+        opacity: 0; 
         transform: translateY(20px);
         transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
     }
 
-    /* REVEAL TEXT WHEN ACTIVE */
+    
+
     li.active .text-content {
         opacity: 1;
         transform: translateY(0);
     }
     
-    li.active .visual-box {
-        transform: scale(1.05); /* Slight pop effect */
+    li.active .visual-box
+     {
+        transform: scale(1.05);
     }
 
     .Bio, .foot {
@@ -107,7 +96,7 @@ body, html {
         background: #333;
     }
 
-    /* Mobile Adjustment */
+  
     @media (max-width: 768px) {
         li, li:nth-child(even) .innerart, li:nth-child(odd) .innerart {
             flex-direction: column;
@@ -115,3 +104,70 @@ body, html {
         }
         .visual-box { width: 100%; aspect-ratio: 16/9; margin-bottom: 20px;}
     }
+
+    #intro-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    border-bottom: 4px solid #F0E68C;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container {
+    max-width: 900px;
+    color: #f0f0f0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.typewriter-wrapper {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+#typing-title {
+    overflow: hidden;
+    border-right: .15em solid #F0E68C;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    width: 0;
+    font-size: 2.5rem;
+    color: #F0E68C; 
+}
+
+.typing-active {
+    animation: 
+        typing 3.5s steps(40, end) forwards,
+        blink-caret .75s step-end infinite;
+}
+
+.ink-content {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+    transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.ink-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F0E68C; }
+}
+
+@media (max-width: 768px) {
+    #typing-title { font-size: 1.5rem; white-space: normal; border: none; width: auto; }
+    .typewriter-wrapper { width: 100%; text-align: center; }
+}
