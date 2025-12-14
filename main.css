@@ -171,3 +171,9 @@ body, html {
     #typing-title { font-size: 1.5rem; white-space: normal; border: none; width: auto; }
     .typewriter-wrapper { width: 100%; text-align: center; }
 }
+.visual-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;     
+}
